@@ -224,9 +224,10 @@ Development has already started.
 | DSO-to-clinic wallet transfer | Implemented |
 | Consumer/demo frontend | Existing; can be shared as reviewer context |
 | Premium service wallet debit model | Planned bounty hardening |
-| Setup documentation and deployment guide | Initial README, `.env.example`, and deployment notes added |
-| Automated tests and reviewer guide | Planned |
-| Demo environment or recorded walkthrough | Planned |
+| Setup documentation and deployment guide | README and `.env.example` updated with exact local setup, required services, env vars, migrations, backend startup, and deployment notes |
+| Manual reviewer guide | Added to README with wallet creation, KYC, funding, deposit verification, transfer, and wallet-center examples |
+| Automated tests | Not included in this milestone; manual reviewer flow is the supported verification path |
+| Demo environment or recorded walkthrough | Live frontend available; recorded walkthrough still planned |
 
 ---
 
@@ -243,14 +244,14 @@ Development has already started.
 | -----: | ----------- | ------------- |
 | 0a. | License | MIT license |
 | 0b. | Documentation | Add a complete `README.md` with local setup, environment variables, database migration steps, API usage, ToroForge configuration, and deployment guidance. Initial README and `.env.example` have been added to the backend repository. |
-| 0c. | Testing and Testing Guide | Add focused tests and a reviewer guide covering wallet creation, KYC, funding initialization, deposit verification, wallet transfer, RBAC checks, and sync log endpoints |
+| 0c. | Reviewer Guide | Add a manual reviewer guide covering wallet creation, KYC, funding initialization, deposit verification, wallet transfer, RBAC checks, and sync log endpoints. The README now documents the main wallet flow; automated tests are not included in this milestone. |
 | 0d. | Article / Report | Publish a technical report explaining how FumiSync uses Toronet/ToroForge wallet infrastructure for healthcare operations and clinic billing workflows |
 | 1. | Backend cleanup and public readiness | Remove environment-specific assumptions, document required secrets, verify `.env` is not tracked, add setup scripts or clear commands, and ensure the repository can be reviewed cleanly. Initial `.gitignore`, `.env.example`, and README cleanup are complete. |
 | 2. | ToroForge wallet and ledger hardening | Finalize DSO treasury wallet, clinic wallet, KYC, funding, balance verification, transfer, and ledger workflows with idempotency and error-handling documentation |
 | 3. | Premium service wallet debits | Define billable service events for eligibility checks, patient messaging, appointment reminders, and AI-assisted calls; debit funded clinic wallets automatically; record service usage and ledger entries for reconciliation |
-| 4. | Reviewer demo flow | Provide a seeded or documented test flow: create DSO, create clinic, create wallets, submit KYC payload, initialize funding, verify deposit, transfer funds from DSO wallet to clinic wallet, trigger a sample premium service debit, and inspect ledger records |
-| 5. | API documentation | Provide endpoint documentation with request/response examples for workspace, sync log, wallet creation, KYC, funding, transfer, and premium service debit endpoints |
-| 6. | Deployment guide | Provide Docker or cloud deployment guidance, including database migrations, environment variables, CORS, secrets, and recommended production boundaries |
+| 4. | Reviewer demo flow | README now provides a documented reviewer flow: health check, create DSO/clinic wallets, start KYC, check KYC status, initialize funding, verify deposit, transfer funds from DSO wallet to clinic wallet, and inspect wallet-center records. Seeded demo data and premium service debit examples remain future work. |
+| 5. | API documentation | README now includes request/response examples for wallet creation, KYC, funding, deposit verification, transfer, and wallet-center inspection. Workspace, sync log, and premium service debit examples remain future documentation work. |
+| 6. | Deployment guide | README includes deployment notes for managed PostgreSQL, Redis, HTTPS, migrations, CORS, and secret management. Docker-specific deployment packaging remains future work. |
 
 ---
 
