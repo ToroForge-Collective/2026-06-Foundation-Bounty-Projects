@@ -224,7 +224,7 @@ Development has already started.
 | DSO-to-clinic wallet transfer | Implemented |
 | Consumer/demo frontend | Existing; can be shared as reviewer context |
 | Premium service wallet debit model | Planned bounty hardening |
-| Setup documentation and deployment guide | Planned |
+| Setup documentation and deployment guide | Initial README, `.env.example`, and deployment notes added |
 | Automated tests and reviewer guide | Planned |
 | Demo environment or recorded walkthrough | Planned |
 
@@ -242,10 +242,10 @@ Development has already started.
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
 | 0a. | License | MIT license |
-| 0b. | Documentation | Add a complete `README.md` with local setup, environment variables, database migration steps, API usage, ToroForge configuration, and deployment guidance |
+| 0b. | Documentation | Add a complete `README.md` with local setup, environment variables, database migration steps, API usage, ToroForge configuration, and deployment guidance. Initial README and `.env.example` have been added to the backend repository. |
 | 0c. | Testing and Testing Guide | Add focused tests and a reviewer guide covering wallet creation, KYC, funding initialization, deposit verification, wallet transfer, RBAC checks, and sync log endpoints |
 | 0d. | Article / Report | Publish a technical report explaining how FumiSync uses Toronet/ToroForge wallet infrastructure for healthcare operations and clinic billing workflows |
-| 1. | Backend cleanup and public readiness | Remove environment-specific assumptions, document required secrets, verify `.env` is not tracked, add setup scripts or clear commands, and ensure the repository can be reviewed cleanly |
+| 1. | Backend cleanup and public readiness | Remove environment-specific assumptions, document required secrets, verify `.env` is not tracked, add setup scripts or clear commands, and ensure the repository can be reviewed cleanly. Initial `.gitignore`, `.env.example`, and README cleanup are complete. |
 | 2. | ToroForge wallet and ledger hardening | Finalize DSO treasury wallet, clinic wallet, KYC, funding, balance verification, transfer, and ledger workflows with idempotency and error-handling documentation |
 | 3. | Premium service wallet debits | Define billable service events for eligibility checks, patient messaging, appointment reminders, and AI-assisted calls; debit funded clinic wallets automatically; record service usage and ledger entries for reconciliation |
 | 4. | Reviewer demo flow | Provide a seeded or documented test flow: create DSO, create clinic, create wallets, submit KYC payload, initialize funding, verify deposit, transfer funds from DSO wallet to clinic wallet, trigger a sample premium service debit, and inspect ledger records |
