@@ -196,7 +196,6 @@ Primary audiences:
 - ecosystem builders who need a reference for Toronet SDK usage across mobile and backend systems
 
 Secondary audiences:
-- reviewers and ecosystem maintainers looking for a production-grade example
 - future contributors who want to extend ToroPass
 
 ### What problem(s) does your project solve?
